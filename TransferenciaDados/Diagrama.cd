@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="TransferenciaDados.UsuariosDTO" Collapsed="true">
+    <Position X="3.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAARAAAABBAAAAAAAABAAAQAACQAAAQIAAQAAAAAAAA=</HashCode>
+      <FileName>UsuariosDTO.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TransferenciaDados.ClientesDTO" Collapsed="true">
+    <Position X="3.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CCAAAgAAgChAEAACAAQAJAAACAEIAAAMAAQAgQEEEAg=</HashCode>
+      <FileName>UsuariosDTO.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TransferenciaDados.LoginSistema" Collapsed="true">
+    <Position X="7" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABAAAAAABAAAAAAAAAAAAAAACAAAAQAAAAAAAAAAAA=</HashCode>
+      <FileName>UsuariosDTO.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TransferenciaDados.SalvarUsuario" Collapsed="true">
+    <Position X="8.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAIAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>UsuariosDTO.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TransferenciaDados.SalvarCliente" Collapsed="true">
+    <Position X="7" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAA=</HashCode>
+      <FileName>UsuariosDTO.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TransferenciaDados.ValidarUsuario" Collapsed="true">
+    <Position X="5.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAIAAAAAACAAAAAAAAAgAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>UsuariosDTO.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TransferenciaDados.ConsultarUsuarios" Collapsed="true">
+    <Position X="7" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAEAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>UsuariosDTO.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TransferenciaDados.ConsultarClientes" Collapsed="true">
+    <Position X="5.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAACAgAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>UsuariosDTO.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TransferenciaDados.EditarClientes" Collapsed="true">
+    <Position X="8.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>UsuariosDTO.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TransferenciaDados.ExcluirClientes" Collapsed="true">
+    <Position X="3.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACA=</HashCode>
+      <FileName>UsuariosDTO.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TransferenciaDados.ExcluirUsuarios" Collapsed="true">
+    <Position X="5.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>UsuariosDTO.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TransferenciaDados.RemoverAdmin" Collapsed="true">
+    <Position X="5.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>UsuariosDTO.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TransferenciaDados.PromoverOperador" Collapsed="true">
+    <Position X="3.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIA=</HashCode>
+      <FileName>UsuariosDTO.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TransferenciaDados.PesquisaClienteOS" Collapsed="true">
+    <Position X="8.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>UsuariosDTO.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
