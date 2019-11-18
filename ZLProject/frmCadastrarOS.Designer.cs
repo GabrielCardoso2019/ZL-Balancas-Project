@@ -145,7 +145,6 @@
             // 
             this.txtEmail_2OS.Location = new System.Drawing.Point(58, 226);
             this.txtEmail_2OS.Name = "txtEmail_2OS";
-            this.txtEmail_2OS.ReadOnly = true;
             this.txtEmail_2OS.Size = new System.Drawing.Size(519, 22);
             this.txtEmail_2OS.TabIndex = 44;
             // 

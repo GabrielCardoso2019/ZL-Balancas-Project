@@ -189,7 +189,7 @@ namespace ZLProject
 
         private void btnAddProdutos_Click(object sender, EventArgs e)
         {
-            {
+              {
                 // instanciar o objeto
                 ConsultarProdutos PesquisarProdutos = new ConsultarProdutos();
                 ProdutosDTO dados = new ProdutosDTO();
@@ -334,7 +334,7 @@ namespace ZLProject
             {
                 var page = doc.AddPage();
                 var graphics = PdfSharp.Drawing.XGraphics.FromPdfPage(page);
-                
+                                
                 var textFormatter = new PdfSharp.Drawing.Layout.XTextFormatter(graphics);
                 var textOSTitle = new PdfSharp.Drawing.Layout.XTextFormatter(graphics);
                 var txtTitles = new PdfSharp.Drawing.Layout.XTextFormatter(graphics);
@@ -415,10 +415,15 @@ namespace ZLProject
                 textOSTitle.DrawString("IE:", fontTitle, PdfSharp.Drawing.XBrushes.Black, new PdfSharp.Drawing.XRect(95, 270, page.Width, page.Height));
                 txtTitles.DrawString(txtIEOS.Text, fontTitle, PdfSharp.Drawing.XBrushes.Black, new PdfSharp.Drawing.XRect(415, 270, page.Width, page.Height));
 
-                //TXts Email
+                //TXts Email 1
                 textOSTitle.DrawString("Email:", fontTitle, PdfSharp.Drawing.XBrushes.Black, new PdfSharp.Drawing.XRect(-240, 250, page.Width, page.Height));
                 txtTitles.DrawString(txtEmailOS.Text, fontTitle, PdfSharp.Drawing.XBrushes.Black, new PdfSharp.Drawing.XRect(85, 250, page.Width, page.Height));
-     
+
+                //TXts Email 2
+                textOSTitle.DrawString("/", fontTitle, PdfSharp.Drawing.XBrushes.Black, new PdfSharp.Drawing.XRect(13, 250, page.Width, page.Height));
+                txtTitles.DrawString(txtEmail_2OS.Text, fontTitle, PdfSharp.Drawing.XBrushes.Black, new PdfSharp.Drawing.XRect(330, 250, page.Width, page.Height));
+
+
                 //TXts Telefone  
                 textOSTitle.DrawString("Celular:", fontTitle, PdfSharp.Drawing.XBrushes.Black, new PdfSharp.Drawing.XRect(-235, 290, page.Width, page.Height));
                 txtTitles.DrawString(txtTelefoneOS.Text, fontTitle, PdfSharp.Drawing.XBrushes.Black, new PdfSharp.Drawing.XRect(95, 290, page.Width, page.Height));
@@ -431,9 +436,9 @@ namespace ZLProject
                 textOSTitle.DrawString("Data:", fontTitle, PdfSharp.Drawing.XBrushes.Black, new PdfSharp.Drawing.XRect(102, 290, page.Width, page.Height));
                 txtTitles.DrawString(txtDataOS.Text, fontTitle, PdfSharp.Drawing.XBrushes.Black, new PdfSharp.Drawing.XRect(420, 290, page.Width, page.Height));
 
-                //Titulo Descrição de Equipamento 
-                textFormatter.Alignment = PdfSharp.Drawing.Layout.XParagraphAlignment.Center;
-                textFormatter.DrawString("Descrição de Equipamento", fontSubTitle2, PdfSharp.Drawing.XBrushes.Black, new PdfSharp.Drawing.XRect(30, 320, page.Width - 60, page.Height - 60));
+                //E-mail para contato
+                //textOSTitle.DrawString("Forma de Pagamento:", fontTitle, PdfSharp.Drawing.XBrushes.Black, new PdfSharp.Drawing.XRect(-195, 309, page.Width, page.Height));
+                //txtTitles.DrawString(txtFormaPag.Text, fontTitle, PdfSharp.Drawing.XBrushes.Black, new PdfSharp.Drawing.XRect(170, 309, page.Width, page.Height));
                 
                 //Titulo Ocorrências 
                 textFormatter.DrawString("Ocorrências:", fontSubTitle2, PdfSharp.Drawing.XBrushes.Black, new PdfSharp.Drawing.XRect(-215, 350, page.Width, page.Height));
@@ -446,7 +451,6 @@ namespace ZLProject
                 //TXTs Produtos
                 textFormatter.DrawString("Qtd", fontTitle, PdfSharp.Drawing.XBrushes.Black, new PdfSharp.Drawing.XRect(-255, 500, page.Width, page.Height));
                 textFormatter.DrawString("Descrição", fontTitle, PdfSharp.Drawing.XBrushes.Black, new PdfSharp.Drawing.XRect(-200, 500, page.Width, page.Height));
-                textFormatter.DrawString("Equipamento", fontTitle, PdfSharp.Drawing.XBrushes.Black, new PdfSharp.Drawing.XRect(-6, 500, page.Width - 60, page.Height - 60));
                 textFormatter.DrawString("Unitário R$", fontTitle, PdfSharp.Drawing.XBrushes.Black, new PdfSharp.Drawing.XRect(105, 500, page.Width, page.Height));
                 textFormatter.DrawString("Valor Total R$", fontTitle, PdfSharp.Drawing.XBrushes.Black, new PdfSharp.Drawing.XRect(213, 500, page.Width, page.Height));
 
@@ -455,11 +459,8 @@ namespace ZLProject
                 graphics.DrawRectangle(PdfSharp.Drawing.XPens.Black, PdfSharp.Drawing.XBrushes.Transparent, new PdfSharp.Drawing.XRect(33, 520, 33, 18));
 
                 //Descrição
-                graphics.DrawRectangle(PdfSharp.Drawing.XPens.Black, PdfSharp.Drawing.XBrushes.Transparent, new PdfSharp.Drawing.XRect(67, 520, 155, 18));
-
-                //Equipamento
-                graphics.DrawRectangle(PdfSharp.Drawing.XPens.Black, PdfSharp.Drawing.XBrushes.Transparent, new PdfSharp.Drawing.XRect(223, 520, 145, 18));
-
+                graphics.DrawRectangle(PdfSharp.Drawing.XPens.Black, PdfSharp.Drawing.XBrushes.Transparent, new PdfSharp.Drawing.XRect(67, 520, 300, 18));
+                                
                 //Unitário R$
                 graphics.DrawRectangle(PdfSharp.Drawing.XPens.Black, PdfSharp.Drawing.XBrushes.Transparent, new PdfSharp.Drawing.XRect(367, 520, 105, 18));
 
@@ -468,16 +469,13 @@ namespace ZLProject
 
                 /*------------------------------------------------------------------------------------------------------------------------------------------*/
 
-                //Retangulos dos produtos - 2º linha
+                /*//Retangulos dos produtos - 2º linha
                 //Quantidade
                 graphics.DrawRectangle(PdfSharp.Drawing.XPens.Black, PdfSharp.Drawing.XBrushes.Transparent, new PdfSharp.Drawing.XRect(33, 538, 33, 18));
 
                 //Descrição
                 graphics.DrawRectangle(PdfSharp.Drawing.XPens.Black, PdfSharp.Drawing.XBrushes.Transparent, new PdfSharp.Drawing.XRect(67, 538, 155, 18));
-
-                //Equipamento
-                graphics.DrawRectangle(PdfSharp.Drawing.XPens.Black, PdfSharp.Drawing.XBrushes.Transparent, new PdfSharp.Drawing.XRect(223, 538, 145, 18));
-
+                               
                 //Unitário R$
                 graphics.DrawRectangle(PdfSharp.Drawing.XPens.Black, PdfSharp.Drawing.XBrushes.Transparent, new PdfSharp.Drawing.XRect(367, 538, 105, 18));
 
@@ -486,16 +484,13 @@ namespace ZLProject
 
                 /*------------------------------------------------------------------------------------------------------------------------------------------*/
 
-                //Retangulos dos produtos - 3º linha
+                /*//Retangulos dos produtos - 3º linha
                 //Quantidade
                 graphics.DrawRectangle(PdfSharp.Drawing.XPens.Black, PdfSharp.Drawing.XBrushes.Transparent, new PdfSharp.Drawing.XRect(33, 556, 33, 18));
 
                 //Descrição
                 graphics.DrawRectangle(PdfSharp.Drawing.XPens.Black, PdfSharp.Drawing.XBrushes.Transparent, new PdfSharp.Drawing.XRect(67, 556, 155, 18));
-
-                //Equipamento
-                graphics.DrawRectangle(PdfSharp.Drawing.XPens.Black, PdfSharp.Drawing.XBrushes.Transparent, new PdfSharp.Drawing.XRect(223, 556, 145, 18));
-
+                                
                 //Unitário R$
                 graphics.DrawRectangle(PdfSharp.Drawing.XPens.Black, PdfSharp.Drawing.XBrushes.Transparent, new PdfSharp.Drawing.XRect(367, 556, 105, 18));
 
@@ -505,16 +500,13 @@ namespace ZLProject
 
                 /*------------------------------------------------------------------------------------------------------------------------------------------*/
 
-                //Retangulos dos produtos - 4º linha
+                /*//Retangulos dos produtos - 4º linha
                 //Quantidade
                 graphics.DrawRectangle(PdfSharp.Drawing.XPens.Black, PdfSharp.Drawing.XBrushes.Transparent, new PdfSharp.Drawing.XRect(33, 574, 33, 18));
 
                 //Descrição
                 graphics.DrawRectangle(PdfSharp.Drawing.XPens.Black, PdfSharp.Drawing.XBrushes.Transparent, new PdfSharp.Drawing.XRect(67, 574, 155, 18));
-
-                //Equipamento
-                graphics.DrawRectangle(PdfSharp.Drawing.XPens.Black, PdfSharp.Drawing.XBrushes.Transparent, new PdfSharp.Drawing.XRect(223, 574, 145, 18));
-
+                                
                 //Unitário R$
                 graphics.DrawRectangle(PdfSharp.Drawing.XPens.Black, PdfSharp.Drawing.XBrushes.Transparent, new PdfSharp.Drawing.XRect(367, 574, 105, 18));
 
@@ -523,15 +515,12 @@ namespace ZLProject
 
                 /*------------------------------------------------------------------------------------------------------------------------------------------*/
 
-                //Retangulos dos produtos - 5º linha
+                /*//Retangulos dos produtos - 5º linha
                 //Quantidade
                 graphics.DrawRectangle(PdfSharp.Drawing.XPens.Black, PdfSharp.Drawing.XBrushes.Transparent, new PdfSharp.Drawing.XRect(33, 592, 33, 18));
 
                 //Descrição
                 graphics.DrawRectangle(PdfSharp.Drawing.XPens.Black, PdfSharp.Drawing.XBrushes.Transparent, new PdfSharp.Drawing.XRect(67, 592, 155, 18));
-
-                //Equipamento
-                graphics.DrawRectangle(PdfSharp.Drawing.XPens.Black, PdfSharp.Drawing.XBrushes.Transparent, new PdfSharp.Drawing.XRect(223, 592, 145, 18));
 
                 //Unitário R$
                 graphics.DrawRectangle(PdfSharp.Drawing.XPens.Black, PdfSharp.Drawing.XBrushes.Transparent, new PdfSharp.Drawing.XRect(367, 592, 105, 18));
@@ -541,15 +530,12 @@ namespace ZLProject
 
                 /*------------------------------------------------------------------------------------------------------------------------------------------*/
 
-                //Retangulos dos produtos - 6º linha
+                /*//Retangulos dos produtos - 6º linha
                 //Quantidade
                 graphics.DrawRectangle(PdfSharp.Drawing.XPens.Black, PdfSharp.Drawing.XBrushes.Transparent, new PdfSharp.Drawing.XRect(33, 610, 33, 18));
 
                 //Descrição
                 graphics.DrawRectangle(PdfSharp.Drawing.XPens.Black, PdfSharp.Drawing.XBrushes.Transparent, new PdfSharp.Drawing.XRect(67, 610, 155, 18));
-
-                //Equipamento
-                graphics.DrawRectangle(PdfSharp.Drawing.XPens.Black, PdfSharp.Drawing.XBrushes.Transparent, new PdfSharp.Drawing.XRect(223, 610, 145, 18));
 
                 //Unitário R$
                 graphics.DrawRectangle(PdfSharp.Drawing.XPens.Black, PdfSharp.Drawing.XBrushes.Transparent, new PdfSharp.Drawing.XRect(367, 610, 105, 18));
@@ -559,15 +545,12 @@ namespace ZLProject
 
                 /*------------------------------------------------------------------------------------------------------------------------------------------*/
 
-                //Retangulos dos produtos - 7º linha
+                /*//Retangulos dos produtos - 7º linha
                 //Quantidade
                 graphics.DrawRectangle(PdfSharp.Drawing.XPens.Black, PdfSharp.Drawing.XBrushes.Transparent, new PdfSharp.Drawing.XRect(33, 628, 33, 18));
 
                 //Descrição
                 graphics.DrawRectangle(PdfSharp.Drawing.XPens.Black, PdfSharp.Drawing.XBrushes.Transparent, new PdfSharp.Drawing.XRect(67, 628, 155, 18));
-
-                //Equipamento
-                graphics.DrawRectangle(PdfSharp.Drawing.XPens.Black, PdfSharp.Drawing.XBrushes.Transparent, new PdfSharp.Drawing.XRect(223, 628, 145, 18));
 
                 //Unitário R$
                 graphics.DrawRectangle(PdfSharp.Drawing.XPens.Black, PdfSharp.Drawing.XBrushes.Transparent, new PdfSharp.Drawing.XRect(367, 628, 105, 18));
@@ -577,15 +560,12 @@ namespace ZLProject
 
                 /*------------------------------------------------------------------------------------------------------------------------------------------*/
 
-                //Retangulos dos produtos - 8º linha
+                /*//Retangulos dos produtos - 8º linha
                 //Quantidade
                 graphics.DrawRectangle(PdfSharp.Drawing.XPens.Black, PdfSharp.Drawing.XBrushes.Transparent, new PdfSharp.Drawing.XRect(33, 646, 33, 18));
 
                 //Descrição
                 graphics.DrawRectangle(PdfSharp.Drawing.XPens.Black, PdfSharp.Drawing.XBrushes.Transparent, new PdfSharp.Drawing.XRect(67, 646, 155, 18));
-
-                //Equipamento
-                graphics.DrawRectangle(PdfSharp.Drawing.XPens.Black, PdfSharp.Drawing.XBrushes.Transparent, new PdfSharp.Drawing.XRect(223, 646, 145, 18));
 
                 //Unitário R$
                 graphics.DrawRectangle(PdfSharp.Drawing.XPens.Black, PdfSharp.Drawing.XBrushes.Transparent, new PdfSharp.Drawing.XRect(367, 646, 105, 18));
@@ -595,15 +575,12 @@ namespace ZLProject
 
                 /*------------------------------------------------------------------------------------------------------------------------------------------*/
 
-                //Retangulos dos produtos - 9º linha
+               /* //Retangulos dos produtos - 9º linha
                 //Quantidade
                 graphics.DrawRectangle(PdfSharp.Drawing.XPens.Black, PdfSharp.Drawing.XBrushes.Transparent, new PdfSharp.Drawing.XRect(33, 664.10, 33, 18));
 
                 //Descrição
                 graphics.DrawRectangle(PdfSharp.Drawing.XPens.Black, PdfSharp.Drawing.XBrushes.Transparent, new PdfSharp.Drawing.XRect(67, 664.10, 155, 18));
-
-                //Equipamento
-                graphics.DrawRectangle(PdfSharp.Drawing.XPens.Black, PdfSharp.Drawing.XBrushes.Transparent, new PdfSharp.Drawing.XRect(223, 664.10, 145, 18));
 
                 //Unitário R$
                 graphics.DrawRectangle(PdfSharp.Drawing.XPens.Black, PdfSharp.Drawing.XBrushes.Transparent, new PdfSharp.Drawing.XRect(367, 664.10, 105, 18));
@@ -614,9 +591,17 @@ namespace ZLProject
                 /*------------------------------------------------------------------------------------------------------------------------------------------*/
 
                 //Retangulos dos produtos - 10º linha
-                //Garantia do Conserto
-                graphics.DrawRectangle(PdfSharp.Drawing.XPens.Black, PdfSharp.Drawing.XBrushes.Transparent, new PdfSharp.Drawing.XRect(33, 682, 334, 18));
-                                
+                //Quantidade
+                graphics.DrawRectangle(PdfSharp.Drawing.XPens.Black, PdfSharp.Drawing.XBrushes.Transparent, new PdfSharp.Drawing.XRect(33, 682, 33, 18));
+
+                //Descrição
+                graphics.DrawRectangle(PdfSharp.Drawing.XPens.Black, PdfSharp.Drawing.XBrushes.Transparent, new PdfSharp.Drawing.XRect(67, 682, 155, 18));
+                textFormatter.DrawString("M/O Conserto:", fontTitle, PdfSharp.Drawing.XBrushes.Black, new PdfSharp.Drawing.XRect(-155, 685, page.Width - 60, page.Height - 60));
+
+
+                //Equipamento
+                graphics.DrawRectangle(PdfSharp.Drawing.XPens.Black, PdfSharp.Drawing.XBrushes.Transparent, new PdfSharp.Drawing.XRect(223, 682, 145, 18));
+
                 //Unitário R$
                 graphics.DrawRectangle(PdfSharp.Drawing.XPens.Black, PdfSharp.Drawing.XBrushes.Transparent, new PdfSharp.Drawing.XRect(367, 682, 105, 18));
 
@@ -625,15 +610,38 @@ namespace ZLProject
 
                 /*------------------------------------------------------------------------------------------------------------------------------------------*/
 
+                //Retangulos dos produtos - 11º linha
+                //Garantia do Conserto
+                graphics.DrawRectangle(PdfSharp.Drawing.XPens.Black, PdfSharp.Drawing.XBrushes.Transparent, new PdfSharp.Drawing.XRect(33, 711.3, 334, 18));
+                textFormatter.DrawString("Garantia do Conserto: 90 dias", fontTitle, PdfSharp.Drawing.XBrushes.Black, new PdfSharp.Drawing.XRect(-150, 712, page.Width - 60, page.Height - 60));
+            
+                //Unitário R$
+                graphics.DrawRectangle(PdfSharp.Drawing.XPens.Black, PdfSharp.Drawing.XBrushes.Transparent, new PdfSharp.Drawing.XRect(367, 711.3, 105, 18));
+                textFormatter.DrawString("Total Nota:", fontTitle, PdfSharp.Drawing.XBrushes.Black, new PdfSharp.Drawing.XRect(135, 712, page.Width - 60, page.Height - 60));
+
+
+                //Valor total R$
+                graphics.DrawRectangle(PdfSharp.Drawing.XPens.Black, PdfSharp.Drawing.XBrushes.Transparent, new PdfSharp.Drawing.XRect(472, 711.3, 80, 18));
+
+                /*------------------------------------------------------------------------------------------------------------------------------------------*/
+
+                //Retangulos dos produtos - 12  º linha
+                //Quantidade
+                graphics.DrawRectangle(PdfSharp.Drawing.XPens.Black, PdfSharp.Drawing.XBrushes.Transparent, new PdfSharp.Drawing.XRect(33, 730, 519, 18));
+                textFormatter.DrawString("Forma de Pgto.:", fontTitle, PdfSharp.Drawing.XBrushes.Black, new PdfSharp.Drawing.XRect(-185, 732, page.Width - 60, page.Height - 60));
+                textFormatter.DrawString(txtFormaPag.Text, fontTitle, PdfSharp.Drawing.XBrushes.Black, new PdfSharp.Drawing.XRect(-90, 733, page.Width - 60, page.Height - 60));
+                
+                /*------------------------------------------------------------------------------------------------------------------------------------------*/
+                
                 //Técnico 
-                textFormatter.DrawString("Técnico:", fontTitle, PdfSharp.Drawing.XBrushes.Black, new PdfSharp.Drawing.XRect(-180, 780, page.Width - 60, page.Height - 60));
-                graphics.DrawRectangle(PdfSharp.Drawing.XPens.Black, PdfSharp.Drawing.XBrushes.Transparent, new PdfSharp.Drawing.XRect(115, 790, 150, 1));
+                textFormatter.DrawString("Técnico:", fontTitle, PdfSharp.Drawing.XBrushes.Black, new PdfSharp.Drawing.XRect(-180, 790, page.Width - 60, page.Height - 60));
+                graphics.DrawRectangle(PdfSharp.Drawing.XPens.Black, PdfSharp.Drawing.XBrushes.Transparent, new PdfSharp.Drawing.XRect(115, 800, 150, 1));
 
                 //Cliente
-                textFormatter.DrawString("Cliente:", fontTitle, PdfSharp.Drawing.XBrushes.Black, new PdfSharp.Drawing.XRect(90, 780, page.Width - 60, page.Height - 60));
-                graphics.DrawRectangle(PdfSharp.Drawing.XPens.Black, PdfSharp.Drawing.XBrushes.Transparent, new PdfSharp.Drawing.XRect(385, 790, 150, 1));
+                textFormatter.DrawString("Cliente:", fontTitle, PdfSharp.Drawing.XBrushes.Black, new PdfSharp.Drawing.XRect(90, 790, page.Width - 60, page.Height - 60));
+                graphics.DrawRectangle(PdfSharp.Drawing.XPens.Black, PdfSharp.Drawing.XBrushes.Transparent, new PdfSharp.Drawing.XRect(385, 800, 150, 1));
 
-                //Final OS - Endereço Z.L. Balanças
+                //Final OS - Endereço Z.  L. Balanças
                 textFormatter.DrawString("Rua Sombrio, 45 - Vila Isabel - Guarulhos/SP - CEP: 07241-380", fontTitle, PdfSharp.Drawing.XBrushes.DarkGray, new PdfSharp.Drawing.XRect(30, 818, page.Width - 60, page.Height - 60));
                                
                 //Retangulos - Caixas onde estão as TXTs
@@ -645,6 +653,8 @@ namespace ZLProject
                 graphics.DrawRectangle(PdfSharp.Drawing.XPens.Black, PdfSharp.Drawing.XBrushes.Transparent, new PdfSharp.Drawing.XRect(30, 268, 520, 18));
                 graphics.DrawRectangle(PdfSharp.Drawing.XPens.Black, PdfSharp.Drawing.XBrushes.Transparent, new PdfSharp.Drawing.XRect(30, 288, 520, 18));
                 graphics.DrawRectangle(PdfSharp.Drawing.XPens.DarkGray, PdfSharp.Drawing.XBrushes.Transparent, new PdfSharp.Drawing.XRect(30, 816, 520, 18));
+                graphics.DrawRectangle(PdfSharp.Drawing.XPens.Black, PdfSharp.Drawing.XBrushes.Transparent, new PdfSharp.Drawing.XRect(30, 308, 520, 18));
+
 
                 doc.Save("arquivo.pdf");
                 System.Diagnostics.Process.Start("arquivo.pdf");
